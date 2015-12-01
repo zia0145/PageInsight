@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<link href="css/style.css" rel="stylesheet"/>
+	
+	<body>
+		<div class="header">
+			<div class="logo">
+				Logo
+			</div>
+			<div class="input-bar">
+				<div style="float:left;width:82%;height:38px;">
+					<input id="input-url" class="input-url" placeholder="Enter your website" />
+				</div>
+				<div style="float:right;width:18%;height:38px;">
+					<button class='button run' onclick="RunURL()">RUN</button>
+				</div>
+			</div>
+			<div id="error-msg" class="error-msg">
+				*Invalid URL entered. Enter complete URL like "http(s)://www.google.com"
+			</div>
+		</div>
+		<div class="container" id="page-two" style="display:none;">
+			<img class="equalizer" src="images\equalizer.gif" alt="Loading...." style="">
+			<div style="color:grey;text-align: center; margin-top:20px;">
+					Test is running on <span style="color:#00D9A4" id="testing-url"></span>.
+			</div>
+			<div style="color:grey;text-align: center;">
+				This can take up to 60 seconds.
+			</div>
+		</div>
+		<div class="container" id="page-three" style="display:none;">
+			<table style="width:100%;">
+				<tr style="width:100%;">
+					<td valign="top" style="width:50%;padding-right:10px;">
+						<h2 style="color:#00D9A4">Website Score</h2>
+						<div>
+							<div style="width:30%; float:left;">
+								<img id="screen-shot" class="screen-shot" src="images\equalizer.gif" alt="Loading...." />
+							</div>
+							<div style="width:37%;float:right;">
+								<div id="score" class="score-bar">
+									81/100
+								</div>
+								<div style="width:100%;font-size:16px;margin-top:15px;">
+									We have identified:
+									<table style="font-size:14px;margin-top:15px;color:grey;">
+										<tr>
+											<td>
+												Should Fix
+											</td>
+											<td id="strong">
+												5 areas
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Consider Fixing
+											</td>
+											<td id="average">
+												2 areas
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Passed
+											</td>
+											<td id="passed">
+												3 areas
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/JSscript.js"></script>
+	</body>
+</html>
